@@ -10,7 +10,7 @@ Contributors: Fraktjakt
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Fraktjakt shipping method plugin for WooCommerce. Integrates Bussgods,DHL,DSV,FedEx,Posten/PostNOrd,Schenker,UPS and more through Fraktjakt.
+Fraktjakt shipping method plugin for WooCommerce. Integrates DHL,DSV,FedEx,Posten/PostNord,Schenker,UPS and more through Fraktjakt.
 
 == Description ==
 Complete shipping integration for WooCommerce with online purchase, printing of shipping labels, booking of pickup and shipment tracking for all major shipping companies in Sweden.
@@ -41,7 +41,7 @@ Whether the customer simply wants low shipping rates, speedy delivery, convenien
 
 = REQUIRES =
 Fraktjakt for WooCommerce requires the WooCommerce plugin as well as an account on Fraktjakt. You will need to enter your Fraktjakt consignor ID and key in this shipping module to activate it. The account is free of charge and is used to administrate your shipments.
-Register your free account on [Fraktjakt](http://fraktjakt.se/account/register "http://fraktjakt.se/account/register").
+Register your free account on [Fraktjakt](http://www.fraktjakt.se/shipper/register_company "http://www.fraktjakt.se/shipper/register_company").
 PLEASE NOTE that Fraktjakt currently only supports Swedish webshops!
 
 
