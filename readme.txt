@@ -5,12 +5,12 @@ Donate link: http://www.fraktjakt.se
 Tags: fraktmodul,WooCommerce,shipping,shipping method,Posten,DHL,Schenker,PostNord,FedEx,UPS,DSV,Bring,Paket,Frakt,Fraktintegrering
 Requires at least: 3.0.1
 Tested up to: 4.2.3
-Stable tag: 1.2.2
+Stable tag: 1.2.3
 Contributors: Fraktjakt
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Fraktjakt shipping method plugin for WooCommerce. Integrates DHL,DSV,FedEx,Posten/PostNord,Schenker,UPS and more through Fraktjakt.
+Fraktjakt shipping method plugin for WooCommerce. Integrates Bussgods,DHL,DSV,FedEx,Posten/PostNOrd,Schenker,UPS and more through Fraktjakt.
 
 == Description ==
 Complete shipping integration for WooCommerce with online purchase, printing of shipping labels, booking of pickup and shipment tracking for all major shipping companies in Sweden.
@@ -41,7 +41,7 @@ Whether the customer simply wants low shipping rates, speedy delivery, convenien
 
 = REQUIRES =
 Fraktjakt for WooCommerce requires the WooCommerce plugin as well as an account on Fraktjakt. You will need to enter your Fraktjakt consignor ID and key in this shipping module to activate it. The account is free of charge and is used to administrate your shipments.
-Register your free account on [Fraktjakt](http://www.fraktjakt.se/shipper/register_company "http://www.fraktjakt.se/shipper/register_company").
+Register your free account on [Fraktjakt](http://fraktjakt.se/account/register "http://fraktjakt.se/account/register").
 PLEASE NOTE that Fraktjakt currently only supports Swedish webshops!
 
 
@@ -69,6 +69,9 @@ PLEASE NOTE that Fraktjakt currently only supports Swedish webshops!
 7. FedEx international waybill.
 
 == Changelog ==
+= 1.2.3 =
+* Changes in the presention of shipping prices
+* Fixed Swedish translation
 = 1.2.2 =
 * Refactoring
 = 1.2.1 =

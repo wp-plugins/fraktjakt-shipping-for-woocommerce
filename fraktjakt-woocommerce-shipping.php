@@ -3,7 +3,7 @@
 Plugin Name: Fraktjakt Shipping Method for WooCommerce
 Plugin URI: http://www.fraktjakt.se
 Description: Fraktjakt shipping method plugin for WooCommerce. Integrates several shipping services through Fraktjakt.
-Version: 1.2.2
+Version: 1.2.3
 Author: Fraktjakt AB (Sweden)
 Author URI: http://www.fraktjakt.se
 */
@@ -27,7 +27,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				 */
 				public function __construct() {
 					$this->id                 = 'fraktjakt_shipping_method'; // Id for your shipping method. Should be uunique.
-					$this->method_title       = __( 'Fraktjakt Shipping Method','fraktjakt-woocommerce-shipping' );  // Title shown in admin
+					$this->method_title       = __( 'Fraktjakt Shipping Method','fraktjakt-shipping-for-woocommerce' );  // Title shown in admin
 					//$this->consignor_key = '000000000';
 					$this->init();
 				}
@@ -99,7 +99,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				      add_action('admin_notices', function() use ($product_errors, $problem_products) {
 				      	if ($product_errors > 0) {
 				      		$class = "error";
-						      $message = "<b>".__('Fraktjakt Shipping Method [WARNING]', 'fraktjakt-woocommerce-shipping')."</b><br>".$product_errors. __(' products are missing weight: ', 'fraktjakt-woocommerce-shipping');
+						      $message = "<b>".__('Fraktjakt Shipping Method [WARNING]', 'fraktjakt-shipping-for-woocommerce')."</b><br>".$product_errors. __(' products are missing weight: ', 'fraktjakt-shipping-for-woocommerce');
 							    echo"<div class=\"$class\"> <p>";
 								  echo $message;
 								  echo "<span style=\"font-size: 10px; line-height: 1;\">";
@@ -115,6 +115,8 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				    
 				    // Save settings in admin if you have any defined
 					  add_action( 'woocommerce_update_options_shipping_' . $this->id, array( $this, 'process_admin_options' ), 1 );
+					  
+					 
 					
 				}
 
@@ -125,104 +127,104 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 		$this->form_fields = array(
 		    'enabled' => array(
-				'title' => __('Enable/disable ', 'fraktjakt-woocommerce-shipping'),
+				'title' => __('Enable/disable ', 'fraktjakt-shipping-for-woocommerce'),
 				'type' => 'checkbox',
-				'label' => __('Enable the Fraktjakt Shipping Method', 'fraktjakt-woocommerce-shipping'),
+				'label' => __('Enable the Fraktjakt Shipping Method', 'fraktjakt-shipping-for-woocommerce'),
 				'default' => ''
 		    ),
 		    'title' => array(
-				'title' => __('Method Title', 'fraktjakt-woocommerce-shipping'),
+				'title' => __('Method Title', 'fraktjakt-shipping-for-woocommerce'),
 				'type' => 'text',
-				'description' => __('Enter the display title of the shipping method.', 'fraktjakt-woocommerce-shipping'),
-				'default' => __('Fraktjakt', 'fraktjakt-woocommerce-shipping')
+				'description' => __('Enter the display title of the shipping method.', 'fraktjakt-shipping-for-woocommerce'),
+				'default' => __('Fraktjakt', 'fraktjakt-shipping-for-woocommerce')
 		    ),
 			  'test_mode' => array(
-				'title' => __('Operation Mode', 'fraktjakt-woocommerce-shipping'),
+				'title' => __('Operation Mode', 'fraktjakt-shipping-for-woocommerce'),
 				'type' => 'select',
 				'class'         => 'wc-enhanced-select',
-				'description' => __('Test this shipping integration using Fraktjakts API TEST server before entering our production environment. <br />(Note: Requires a separate account in the <a href=http://api2.fraktjakt.se/account/register target=_blank>Fraktjakt TEST API server</a>)', 'fraktjakt-woocommerce-shipping'),
-				//'label' => __('Enable test mode', 'fraktjakt-woocommerce-shipping'),
+				'description' => __('Test this shipping integration using Fraktjakts API TEST server before entering our production environment. <br />(Note: Requires a separate account in the <a href=http://api2.fraktjakt.se/account/register target=_blank>Fraktjakt TEST API server</a>)', 'fraktjakt-shipping-for-woocommerce'),
+				//'label' => __('Enable test mode', 'fraktjakt-shipping-for-woocommerce'),
 				'default' => 'production',
 		        'options'    => array(
-		          'production'    => __( 'Production', 'fraktjakt-woocommerce-shipping' ),
-		          'test'   => __( 'Test', 'fraktjakt-woocommerce-shipping' ),
+		          'production'    => __( 'Production', 'fraktjakt-shipping-for-woocommerce' ),
+		          'test'   => __( 'Test', 'fraktjakt-shipping-for-woocommerce' ),
 		        )
 		    ),
 		    'consignor_id' => array(
-				'title' => __( 'Authentication', 'fraktjakt-woocommerce-shipping' ),
+				'title' => __( 'Authentication', 'fraktjakt-shipping-for-woocommerce' ),
 				'type' => 'text',
-				'description'  => __( 'Consignor Id for the production server.', 'fraktjakt-woocommerce-shipping' ),
+				'description'  => __( 'Consignor Id for the production server.', 'fraktjakt-shipping-for-woocommerce' ),
 		    ),
 		    'consignor_key' => array(
-				//'title' => __('Consignor Key', 'fraktjakt-woocommerce-shipping'),
+				//'title' => __('Consignor Key', 'fraktjakt-shipping-for-woocommerce'),
 				'type' => 'text',
-				'description' => __('Consignor Key for the production server.', 'fraktjakt-woocommerce-shipping'),
+				'description' => __('Consignor Key for the production server.', 'fraktjakt-shipping-for-woocommerce'),
 			  ),
 			  'consignor_id_test' => array(
-				//'title' => __( 'Authentication', 'fraktjakt-woocommerce-shipping' ),
+				//'title' => __( 'Authentication', 'fraktjakt-shipping-for-woocommerce' ),
 				'type' => 'text',
-				'description'  => __( 'Consignor Id for the test server.', 'fraktjakt-woocommerce-shipping' ),
+				'description'  => __( 'Consignor Id for the test server.', 'fraktjakt-shipping-for-woocommerce' ),
 		    ),
 		    'consignor_key_test' => array(
-				//'title' => __('Consignor Key', 'fraktjakt-woocommerce-shipping'),
+				//'title' => __('Consignor Key', 'fraktjakt-shipping-for-woocommerce'),
 				'type' => 'text',
-				'description' => __('Consignor Key for the test server.', 'fraktjakt-woocommerce-shipping'),
+				'description' => __('Consignor Key for the test server.', 'fraktjakt-shipping-for-woocommerce'),
 			  ),
 			  array(
-				'title' => __('Shipping alternatives', 'fraktjakt-woocommerce-shipping'),
+				'title' => __('Shipping alternatives', 'fraktjakt-shipping-for-woocommerce'),
 				'type' => 'title',
-				'description' => __('Enable/disable display of the following attributes in the shipping alternatives that customers see in the cart and in checkout.', 'fraktjakt-woocommerce-shipping')
+				'description' => __('Enable/disable display of the following attributes in the shipping alternatives that customers see in the cart and in checkout.', 'fraktjakt-shipping-for-woocommerce')
 		    ),
 			  'shipping_company_info' => array(
-				//'title' => __('Shipping alternatives', 'fraktjakt-woocommerce-shipping'),
+				//'title' => __('Shipping alternatives', 'fraktjakt-shipping-for-woocommerce'),
 				'type' => 'checkbox',
-				//'description' => __('Displayed in the shipping alternatives customers see in the cart and in checkout.', 'fraktjakt-woocommerce-shipping'),
-				'label' => __('Display shipping company names', 'fraktjakt-woocommerce-shipping'),
+				//'description' => __('Displayed in the shipping alternatives customers see in the cart and in checkout.', 'fraktjakt-shipping-for-woocommerce'),
+				'label' => __('Display shipping company names', 'fraktjakt-shipping-for-woocommerce'),
 				'default' => 'yes'				
 		    ),
 			  /*'shipping_product_info' => array(
-				//'title' => __('Shipping products', 'fraktjakt-woocommerce-shipping'),
+				//'title' => __('Shipping products', 'fraktjakt-shipping-for-woocommerce'),
 				'type' => 'checkbox',
-				//'description' => __('Displayed in the shipping alternatives customers see in the cart and in checkout.', 'fraktjakt-woocommerce-shipping'),
-				'label' => __('Display shipping product names', 'fraktjakt-woocommerce-shipping'),
+				//'description' => __('Displayed in the shipping alternatives customers see in the cart and in checkout.', 'fraktjakt-shipping-for-woocommerce'),
+				'label' => __('Display shipping product names', 'fraktjakt-shipping-for-woocommerce'),
 				'default' => 'yes'
 		    ),*/
 			  'distance_closest_delivery_info' => array(
-				//'title' => __('Agent', 'fraktjakt-woocommerce-shipping'),
+				//'title' => __('Agent', 'fraktjakt-shipping-for-woocommerce'),
 				'type' => 'checkbox',
-				//'description' => __('Displayed in the shipping alternatives customers see in the cart and in checkout.', 'fraktjakt-woocommerce-shipping'),
-				'label' => __('Display Agent for package retrieval by the customer', 'fraktjakt-woocommerce-shipping'),
+				//'description' => __('Displayed in the shipping alternatives customers see in the cart and in checkout.', 'fraktjakt-shipping-for-woocommerce'),
+				'label' => __('Display Agent for package retrieval by the customer', 'fraktjakt-shipping-for-woocommerce'),
 				'default' => 'yes'
 		    ),
 			  'dropoff_title' => array(
-				//'title' => __('Door-to-Door delivery', 'fraktjakt-woocommerce-shipping'),
+				//'title' => __('Door-to-Door delivery', 'fraktjakt-shipping-for-woocommerce'),
 				'type' => 'text',
-				'description' => __('Only shipping products which include Door-to-Door delivery will display this text.  <br>Displayed in the shipping alternatives customers see in the cart and in checkout.', 'fraktjakt-woocommerce-shipping'),
-				'default' => __('Door-to-Door delivery', 'fraktjakt-woocommerce-shipping')
+				'description' => __('Only shipping products which include Door-to-Door delivery will display this text.  <br>Displayed in the shipping alternatives customers see in the cart and in checkout.', 'fraktjakt-shipping-for-woocommerce'),
+				'default' => __('Door-to-Door delivery', 'fraktjakt-shipping-for-woocommerce')
 		    ),
 			  'estimated_delivery_info' => array(
-				//'title' => __('Delivery time', 'fraktjakt-woocommerce-shipping'),
+				//'title' => __('Delivery time', 'fraktjakt-shipping-for-woocommerce'),
 				'type' => 'checkbox',
-				//'description' => __('Displayed in the shipping alternatives customers see in the cart and in checkout.', 'fraktjakt-woocommerce-shipping'),
-				'label' => __('Display Fraktjakts estimated delivery time info', 'fraktjakt-woocommerce-shipping'),
+				//'description' => __('Displayed in the shipping alternatives customers see in the cart and in checkout.', 'fraktjakt-shipping-for-woocommerce'),
+				'label' => __('Display Fraktjakts estimated delivery time info', 'fraktjakt-shipping-for-woocommerce'),
 				'default' => 'yes'
 		    ),
 			  'fallback_service_name' => array(
-				'title' => __('Fallback service', 'fraktjakt-woocommerce-shipping'),
+				'title' => __('Fallback service', 'fraktjakt-shipping-for-woocommerce'),
 				'type' => 'text',
-				'description' => __('This text is shown together with a Fallback price when the webshop does not receive a prompt response from Fraktjakt, <br>for instance, when there is a communications problem over the internet.', 'fraktjakt-woocommerce-shipping'),
-				'default' => __('Standard shipping', 'fraktjakt-woocommerce-shipping')
+				'description' => __('This text is shown together with a Fallback price when the webshop does not receive a prompt response from Fraktjakt, <br>for instance, when there is a communications problem over the internet.', 'fraktjakt-shipping-for-woocommerce'),
+				'default' => __('Standard shipping', 'fraktjakt-shipping-for-woocommerce')
 		    ),
 			  'fallback_service_price' => array(
-				//'title' => __('Fallback service price', 'fraktjakt-woocommerce-shipping'),
+				//'title' => __('Fallback service price', 'fraktjakt-shipping-for-woocommerce'),
 				'type' => 'text',
-				'description' => __('The price that is shown together with the fallback text (above).', 'fraktjakt-woocommerce-shipping'),
+				'description' => __('The price that is shown together with the fallback text (above).', 'fraktjakt-shipping-for-woocommerce'),
 				'default' => '100'
 		    ),
 			  'fraktjakt_admin_email' => array(
-				'title' => __('Admin email address', 'fraktjakt-woocommerce-shipping'),
+				'title' => __('Admin email address', 'fraktjakt-shipping-for-woocommerce'),
 				'type' => 'text',
-				'description' => __('Error messages from the Fraktjakt Shipping Method will be sent to this email address.', 'fraktjakt-woocommerce-shipping')
+				'description' => __('Error messages from the Fraktjakt Shipping Method will be sent to this email address.', 'fraktjakt-shipping-for-woocommerce')
 		    )			 
 		);
 	}
@@ -264,7 +266,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 	
 		// loop through each error and display it
 		foreach ( $this->errors as $key => $errmsg ) {
-			$message = "<b>".__('Fraktjakt Shipping Method [ERROR]', 'fraktjakt-woocommerce-shipping')."</b><br>".$errmsg;
+			$message = "<b>".__('Fraktjakt Shipping Method [ERROR]', 'fraktjakt-shipping-for-woocommerce')."</b><br>".$errmsg;
 			$class = "error";
 			echo "<div class=\"$class\"> <p>";
 			echo $message;
@@ -415,7 +417,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 									if((!is_array($value['agent_link']) || !is_array($value['agent_info'])))
 									{
 										$label.='<br />';
-										$label.='<span style=\"font-weight: 400;\">'.__( 'Agent','fraktjakt-woocommerce-shipping' ).'';
+										$label.='<span style=\"font-weight: 400;\">'.__( 'Agent','fraktjakt-shipping-for-woocommerce' ).'';
 										$label.=':&nbsp;';
 										if(!is_array($value['agent_link']) && !is_array($value['agent_info']))
 										{
@@ -442,14 +444,14 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 								if(!is_array($value['arrival_time']) && $this->estimated_delivery_info=='yes')
 								{
 										$label.='<br />';
-										$label.='<span style=\"font-weight: 400;\">'.__( 'Arrival Time','fraktjakt-woocommerce-shipping' ).'';
+										$label.='<span style=\"font-weight: 400;\">'.__( 'Arrival Time','fraktjakt-shipping-for-woocommerce' ).'';
 										$label.=':&nbsp;';
 										$label.=$value['arrival_time'];
 										$label.="</span>";
 									
 								}
-								$label.='<br><span style=\"font-weight: 400;\">'.__( 'Price','fraktjakt-woocommerce-shipping' ).'';
-								
+								//$label.='<br><span style=\"font-weight: 400;\">'.__( 'Price','fraktjakt-shipping-for-woocommerce' ).'';
+								$label.='<br>';
 									$rate = array(
 										'id' =>$this->id."_".$shipment_id."_".$value['id'],
 										'label' => $label,
@@ -479,6 +481,31 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 							);
 							$this->add_rate($rate);
 						}
+						
+						 /**
+					 * Remove colon from shipping product label
+					 */
+					add_filter( 'woocommerce_cart_shipping_method_full_label', 'wc_custom_shipping_labels', 10, 2 );
+					function wc_custom_shipping_labels( $label, $method ) {
+					    if ( $method->cost > 0 ) {
+					        if ( WC()->cart->tax_display_cart == 'excl' ) {
+								preg_match('/(.*?): <span class="amount">/', $label, $output);
+					        	$nocolon = $output[1];
+					            $label = $nocolon." ";
+					            $label .= wc_price( $method->cost );
+					            if ( $method->get_shipping_tax() > 0 && WC()->cart->prices_include_tax ) {
+					                $label .= ' <small>' . WC()->countries->ex_tax_or_vat() . '</small>';
+					            }
+					        } else {
+					            $label = wc_price( $method->cost + $method->get_shipping_tax() );
+					            if ( $method->get_shipping_tax() > 0 && ! WC()->cart->prices_include_tax ) {
+					                $label = ' <small>' . WC()->countries->inc_tax_or_vat() . '</small>';
+					            }
+					        }
+					    }
+					
+					    return $label;
+					}
 								
 					}
 					
@@ -686,7 +713,7 @@ add_action( 'woocommerce_order_status_processing', 'fraktjakt_shipping_complete'
 	
 	
 	
-load_plugin_textdomain('fraktjakt-woocommerce-shipping', false, 'fraktjakt-woocommerce-shipping/languages/');
+load_plugin_textdomain('fraktjakt-shipping-for-woocommerce', false, dirname( plugin_basename( __FILE__ ) ) . '/languages');
 	
 	
 }
