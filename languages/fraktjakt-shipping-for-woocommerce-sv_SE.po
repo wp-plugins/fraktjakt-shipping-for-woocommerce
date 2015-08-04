@@ -4,16 +4,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fraktjakt Shipping Method for WooCommerce 1.2.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/fraktjakt-shipping-for-woocommerce\n"
-"POT-Creation-Date: 2015-08-04 13:42+0200\n"
+"POT-Creation-Date: 2015-08-04 14:49+0200\n"
+"PO-Revision-Date: 2015-08-04 14:49+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-08-04 13:46+0200\n"
-"Language-Team: \n"
 "X-Generator: Poedit 1.8.3\n"
-"Last-Translator: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: sv\n"
 
 #: fraktjakt-woocommerce-shipping.php:30
 msgid "Fraktjakt Shipping Method"
@@ -27,103 +27,102 @@ msgstr "Fraktjakt [VARNING]"
 msgid " products are missing weight: "
 msgstr " produkter som saknar vikt: "
 
-#: fraktjakt-woocommerce-shipping.php:128
+#: fraktjakt-woocommerce-shipping.php:130
 msgid "Enable/disable "
 msgstr "Aktivera/avaktivera"
 
-#: fraktjakt-woocommerce-shipping.php:130
+#: fraktjakt-woocommerce-shipping.php:132
 msgid "Enable the Fraktjakt Shipping Method"
 msgstr "Aktivera fraktintegreringen med Fraktjakt "
 
-#: fraktjakt-woocommerce-shipping.php:134
+#: fraktjakt-woocommerce-shipping.php:136
 msgid "Method Title"
 msgstr "Metodens titel"
 
-#: fraktjakt-woocommerce-shipping.php:136
+#: fraktjakt-woocommerce-shipping.php:138
 msgid "Enter the display title of the shipping method."
 msgstr "Ange titeln som visas i listan av fraktmetoder som finns tillgängliga till WooCommerce "
 
-#: fraktjakt-woocommerce-shipping.php:137
+#: fraktjakt-woocommerce-shipping.php:139
 msgid "Fraktjakt"
 msgstr "Fraktjakt"
 
-#: fraktjakt-woocommerce-shipping.php:140
+#: fraktjakt-woocommerce-shipping.php:142
 msgid "Operation Mode"
 msgstr "Driftläge"
 
-#: fraktjakt-woocommerce-shipping.php:143
+#: fraktjakt-woocommerce-shipping.php:145
 msgid ""
 "Test this shipping integration using Fraktjakts API TEST server before entering our production "
-"environment. <br />(Note: Requires a separate account in the <a href=http://api2.fraktjakt.se/account/"
-"register target=_blank>Fraktjakt TEST API server</a>)"
+"environment."
 msgstr ""
-"Testa gärna din fraktintegration i Fraktjakts API TEST server innan du kör skarpt  i produktionsservern. "
+"Testa gärna din fraktintegration i Fraktjakts API TEST server innan du kör skarpt  i produktionsservern."
 
-#: fraktjakt-woocommerce-shipping.php:147
+#: fraktjakt-woocommerce-shipping.php:149
 msgid "Production"
 msgstr "Produktion (använd Fraktjakts skarpa servrar)"
 
-#: fraktjakt-woocommerce-shipping.php:148
+#: fraktjakt-woocommerce-shipping.php:150
 msgid "Test"
 msgstr "Test (använd Fraktjakts testserver)"
 
-#: fraktjakt-woocommerce-shipping.php:152
+#: fraktjakt-woocommerce-shipping.php:154
 msgid "Authentication"
 msgstr "Autentisering"
 
-#: fraktjakt-woocommerce-shipping.php:154
+#: fraktjakt-woocommerce-shipping.php:156
 msgid "Consignor Id for the production server."
 msgstr "Consignor Id för produktionsservern"
 
-#: fraktjakt-woocommerce-shipping.php:159
+#: fraktjakt-woocommerce-shipping.php:161
 msgid "Consignor Key for the production server."
 msgstr "Consignor Key för produktionsservern"
 
-#: fraktjakt-woocommerce-shipping.php:164
+#: fraktjakt-woocommerce-shipping.php:166
 msgid "Consignor Id for the test server."
 msgstr "Consignor Id för testservern"
 
-#: fraktjakt-woocommerce-shipping.php:169
+#: fraktjakt-woocommerce-shipping.php:171
 msgid "Consignor Key for the test server."
 msgstr "Consignor Key för testservern"
 
-#: fraktjakt-woocommerce-shipping.php:172
+#: fraktjakt-woocommerce-shipping.php:174
 msgid "Shipping alternatives"
 msgstr "Fraktalternativ"
 
-#: fraktjakt-woocommerce-shipping.php:174
+#: fraktjakt-woocommerce-shipping.php:176
 msgid ""
 "Enable/disable display of the following attributes in the shipping alternatives that customers see in "
 "the cart and in checkout."
 msgstr "Aktivera/avaktivera visningen av följande attribut för fraktalternativen som dina kunder ser."
 
-#: fraktjakt-woocommerce-shipping.php:180
+#: fraktjakt-woocommerce-shipping.php:182
 msgid "Display shipping company names"
 msgstr "Visar fraktbolagens namn bland fraktalternativen"
 
-#: fraktjakt-woocommerce-shipping.php:194
+#: fraktjakt-woocommerce-shipping.php:196
 msgid "Display Agent for package retrieval by the customer"
 msgstr "Visar information om mottagande fraktombud till dina kunder"
 
-#: fraktjakt-woocommerce-shipping.php:200
+#: fraktjakt-woocommerce-shipping.php:202
 msgid ""
 "Only shipping products which include Door-to-Door delivery will display this text.  <br>Displayed in the "
 "shipping alternatives customers see in the cart and in checkout."
 msgstr "Endast frakttjänster som inkluderar utkörning visar denna text för dina kunder."
 
-#: fraktjakt-woocommerce-shipping.php:201
+#: fraktjakt-woocommerce-shipping.php:203
 msgid "Door-to-Door delivery"
 msgstr "Utkörning"
 
-#: fraktjakt-woocommerce-shipping.php:207
+#: fraktjakt-woocommerce-shipping.php:209
 msgid "Display Fraktjakts estimated delivery time info"
 msgstr "Visar Fraktjakts uppskattade leveranstid"
 
-#: fraktjakt-woocommerce-shipping.php:211
+#: fraktjakt-woocommerce-shipping.php:213
 msgid "Fallback service"
 msgstr "Felsäkert fraktalternativ"
 
-#: fraktjakt-woocommerce-shipping.php:213
+#: fraktjakt-woocommerce-shipping.php:215
 msgid ""
 "This text is shown together with a Fallback price when the webshop does not receive a prompt response "
 "from Fraktjakt, <br>for instance, when there is a communications problem over the internet."
@@ -131,37 +130,33 @@ msgstr ""
 "Denna text visas tillsammans med priset som ett felsäkert alternativ om webshopen skulle misslyckas få "
 "ett svar från Fraktjakt."
 
-#: fraktjakt-woocommerce-shipping.php:214
+#: fraktjakt-woocommerce-shipping.php:216
 msgid "Standard shipping"
 msgstr "Standardfrakt"
 
-#: fraktjakt-woocommerce-shipping.php:219
+#: fraktjakt-woocommerce-shipping.php:221
 msgid "The price that is shown together with the fallback text (above)."
 msgstr "Kostnaden för den angivna fallbacktjänsten (ovan)."
 
-#: fraktjakt-woocommerce-shipping.php:223
+#: fraktjakt-woocommerce-shipping.php:225
 msgid "Admin email address"
 msgstr "Admins emailadress"
 
-#: fraktjakt-woocommerce-shipping.php:225
+#: fraktjakt-woocommerce-shipping.php:227
 msgid "Error messages from the Fraktjakt Shipping Method will be sent to this email address."
 msgstr "Felmeddelanden från Fraktjakt kommer att skickas till denna emailadress."
 
-#: fraktjakt-woocommerce-shipping.php:267
+#: fraktjakt-woocommerce-shipping.php:269
 msgid "Fraktjakt Shipping Method [ERROR]"
 msgstr "Fraktjakt [FEL]"
 
-#: fraktjakt-woocommerce-shipping.php:418
+#: fraktjakt-woocommerce-shipping.php:420
 msgid "Agent"
 msgstr "Fraktombud"
 
-#: fraktjakt-woocommerce-shipping.php:445
+#: fraktjakt-woocommerce-shipping.php:447
 msgid "Arrival Time"
 msgstr "Leveranstid"
-
-#: fraktjakt-woocommerce-shipping.php:451
-msgid "Price"
-msgstr "Pris"
 
 #. Plugin Name of the plugin/theme
 msgid "Fraktjakt Shipping Method for WooCommerce"
@@ -181,3 +176,14 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Fraktjakt AB (Sweden)"
 msgstr "Fraktjakt AB (Sverige)"
+
+#~ msgid ""
+#~ "Test this shipping integration using Fraktjakts API TEST server before entering our production "
+#~ "environment. <br />(Note: Requires a separate account in the <a href=http://api2.fraktjakt.se/account/"
+#~ "register target=_blank>Fraktjakt TEST API server</a>)"
+#~ msgstr ""
+#~ "Testa gärna din fraktintegration i Fraktjakts API TEST server innan du kör skarpt  i "
+#~ "produktionsservern. "
+
+#~ msgid "Price"
+#~ msgstr "Pris"
