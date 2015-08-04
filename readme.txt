@@ -1,4 +1,4 @@
-=== Fraktjakt Shipping plugin ===
+=== Fraktjakt WooCommerce Shipping ===
 Plugin URI: http://www.fraktjakt.se
 Author: Fraktjakt
 Donate link: http://www.fraktjakt.se
