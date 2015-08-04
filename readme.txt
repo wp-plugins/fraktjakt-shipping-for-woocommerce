@@ -2,7 +2,7 @@
 Plugin URI: http://www.fraktjakt.se
 Author: Fraktjakt
 Donate link: http://www.fraktjakt.se
-Tags: fraktmodul,WooCommerce,shipping,shipping method,Posten,DHL,Schenker,PostNord,FedEx,UPS,DSV,Bring,Paket,Frakt,Fraktintegrering
+Tags: fraktmodul,WooCommerce,shipping,shipping method,Posten,DHL,Schenker,PostNord,FedEx,UPS,DSV,Bring,Paket,Frakt,Fraktintegrering,frakt
 Requires at least: 3.0.1
 Tested up to: 4.2.3
 Stable tag: 1.2.2
