@@ -1,39 +1,11 @@
-# Copyright (C) 2015 Fraktjakt Shipping Method for WooCommercePlugin URI: http://www.fraktjakt.seDescription: Fraktjakt shipping method plugin for WooCommerce. Integrates several shipping services through Fraktjakt.Version: 1.2.5Author: Fraktjakt AB (Sweden)Author URI: http://www.fraktjakt.se*//** * Check if WooCommerce is active */if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {	function fraktjakt_shipping_method_init() {		if ( ! class_exists( 'WC_Fraktjakt_Shipping_Method' ) ) {			class WC_Fraktjakt_Shipping_Method extends WC_Shipping_Method {								//$consignor_key;								/**				 * Constructor for your shipping class				 *				 * @access public				 * @return void				 */				public function __construct() {					$this->id                 = 'fraktjakt_shipping_method'; // Id for your shipping method. Should be uunique.					$this->method_title       = __( 'Fraktjakt','fraktjakt-shipping-for-woocommerce' );  // Title shown in admin
-# This file is distributed under the same license as the Fraktjakt Shipping Method for WooCommercePlugin URI: http://www.fraktjakt.seDescription: Fraktjakt shipping method plugin for WooCommerce. Integrates several shipping services through Fraktjakt.Version: 1.2.5Author: Fraktjakt AB (Sweden)Author URI: http://www.fraktjakt.se*//** * Check if WooCommerce is active */if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {	function fraktjakt_shipping_method_init() {		if ( ! class_exists( 'WC_Fraktjakt_Shipping_Method' ) ) {			class WC_Fraktjakt_Shipping_Method extends WC_Shipping_Method {								//$consignor_key;								/**				 * Constructor for your shipping class				 *				 * @access public				 * @return void				 */				public function __construct() {					$this->id                 = 'fraktjakt_shipping_method'; // Id for your shipping method. Should be uunique.					$this->method_title       = __( 'Fraktjakt','fraktjakt-shipping-for-woocommerce' );  // Title shown in admin package.
+# Copyright (C) 2015 Fraktjakt Shipping Method for WooCommerce
+# This file is distributed under the same license as the Fraktjakt Shipping Method for WooCommerce package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Fraktjakt Shipping Method for WooCommerce\rPlugin URI: "
-"http://www.fraktjakt.se\rDescription: Fraktjakt shipping method plugin for "
-"WooCommerce. Integrates several shipping services through Fraktjakt."
-"\rVersion: 1.2.5\rAuthor: Fraktjakt AB (Sweden)\rAuthor URI: http://www."
-"fraktjakt.se\r*/\r\r/**\r * Check if WooCommerce is active\r */\rif "
-"( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', "
-"get_option( 'active_plugins' ) ) ) ) {\r\r\tfunction "
-"fraktjakt_shipping_method_init() {\r\t\tif ( ! class_exists"
-"( 'WC_Fraktjakt_Shipping_Method' ) ) {\r\t\t\tclass "
-"WC_Fraktjakt_Shipping_Method extends WC_Shipping_Method {\r\t\t\t\t\r\t\t\t"
-"\t//$consignor_key;\r\t\t\t\t\r\t\t\t\t/**\r\t\t\t\t * Constructor for your "
-"shipping class\r\t\t\t\t *\r\t\t\t\t * @access public\r\t\t\t\t * @return "
-"void\r\t\t\t\t */\r\t\t\t\tpublic function __construct() {\r\t\t\t\t\t$this-"
-">id                 = 'fraktjakt_shipping_method'; // Id for your shipping "
-"method. Should be uunique.\r\t\t\t\t\t$this->method_title       = __"
-"( 'Fraktjakt','fraktjakt-shipping-for-woocommerce' );  // Title shown in "
-"admin 1.2.5\rAuthor: Fraktjakt AB (Sweden)\rAuthor URI: http://www.fraktjakt."
-"se\r*/\r\r/**\r * Check if WooCommerce is active\r */\rif ( in_array"
-"( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option"
-"( 'active_plugins' ) ) ) ) {\r\r\tfunction fraktjakt_shipping_method_init() "
-"{\r\t\tif ( ! class_exists( 'WC_Fraktjakt_Shipping_Method' ) ) {\r\t\t"
-"\tclass WC_Fraktjakt_Shipping_Method extends WC_Shipping_Method {\r\t\t\t\t\r"
-"\t\t\t\t//$consignor_key;\r\t\t\t\t\r\t\t\t\t/**\r\t\t\t\t * Constructor for "
-"your shipping class\r\t\t\t\t *\r\t\t\t\t * @access public\r\t\t\t\t * "
-"@return void\r\t\t\t\t */\r\t\t\t\tpublic function __construct() {\r\t\t\t\t"
-"\t$this->id                 = 'fraktjakt_shipping_method'; // Id for your "
-"shipping method. Should be uunique.\r\t\t\t\t\t$this->method_title       = __"
-"( 'Fraktjakt','fraktjakt-shipping-for-woocommerce' );  // Title shown in "
-"admin\n"
+"Project-Id-Version: Fraktjakt Shipping Method for WooCommerce 1.2.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/fraktjakt-"
 "shipping-for-woocommerce\n"
-"POT-Creation-Date: 2015-08-07 08:54:04+00:00\n"
+"POT-Creation-Date: 2015-08-07 09:40:27+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -97,7 +69,7 @@ msgid "Consignor Id for the production server."
 msgstr ""
 
 #: fraktjakt-woocommerce-shipping.php:159
-msgid "Direct link to Fraktjakt PROD API webshopsettings"
+msgid "Direct link to Fraktjakt PROD API webshop settings"
 msgstr ""
 
 #: fraktjakt-woocommerce-shipping.php:164
@@ -109,7 +81,7 @@ msgid "Consignor Id for the test server."
 msgstr ""
 
 #: fraktjakt-woocommerce-shipping.php:170
-msgid "Direct link to Fraktjakt TEST API webshopsettings"
+msgid "Direct link to Fraktjakt TEST API webshop settings"
 msgstr ""
 
 #: fraktjakt-woocommerce-shipping.php:175
@@ -191,94 +163,22 @@ msgid "Arrival Time"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid ""
-"Fraktjakt Shipping Method for WooCommerce\rPlugin URI: http://www.fraktjakt."
-"se\rDescription: Fraktjakt shipping method plugin for WooCommerce. "
-"Integrates several shipping services through Fraktjakt.\rVersion: "
-"1.2.5\rAuthor: Fraktjakt AB (Sweden)\rAuthor URI: http://www.fraktjakt.se\r*/"
-"\r\r/**\r * Check if WooCommerce is active\r */\rif ( in_array( 'woocommerce/"
-"woocommerce.php', apply_filters( 'active_plugins', get_option"
-"( 'active_plugins' ) ) ) ) {\r\r\tfunction fraktjakt_shipping_method_init() "
-"{\r\t\tif ( ! class_exists( 'WC_Fraktjakt_Shipping_Method' ) ) {\r\t\t"
-"\tclass WC_Fraktjakt_Shipping_Method extends WC_Shipping_Method {\r\t\t\t\t\r"
-"\t\t\t\t//$consignor_key;\r\t\t\t\t\r\t\t\t\t/**\r\t\t\t\t * Constructor for "
-"your shipping class\r\t\t\t\t *\r\t\t\t\t * @access public\r\t\t\t\t * "
-"@return void\r\t\t\t\t */\r\t\t\t\tpublic function __construct() {\r\t\t\t\t"
-"\t$this->id                 = 'fraktjakt_shipping_method'; // Id for your "
-"shipping method. Should be uunique.\r\t\t\t\t\t$this->method_title       = __"
-"( 'Fraktjakt','fraktjakt-shipping-for-woocommerce' );  // Title shown in "
-"admin"
+msgid "Fraktjakt Shipping Method for WooCommerce"
 msgstr ""
 
+#. #-#-#-#-#  plugin.pot (Fraktjakt Shipping Method for WooCommerce 1.2.6)  #-#-#-#-#
 #. Plugin URI of the plugin/theme
-msgid ""
-"http://www.fraktjakt.se\rDescription: Fraktjakt shipping method plugin for "
-"WooCommerce. Integrates several shipping services through Fraktjakt."
-"\rVersion: 1.2.5\rAuthor: Fraktjakt AB (Sweden)\rAuthor URI: http://www."
-"fraktjakt.se\r*/\r\r/**\r * Check if WooCommerce is active\r */\rif "
-"( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', "
-"get_option( 'active_plugins' ) ) ) ) {\r\r\tfunction "
-"fraktjakt_shipping_method_init() {\r\t\tif ( ! class_exists"
-"( 'WC_Fraktjakt_Shipping_Method' ) ) {\r\t\t\tclass "
-"WC_Fraktjakt_Shipping_Method extends WC_Shipping_Method {\r\t\t\t\t\r\t\t\t"
-"\t//$consignor_key;\r\t\t\t\t\r\t\t\t\t/**\r\t\t\t\t * Constructor for your "
-"shipping class\r\t\t\t\t *\r\t\t\t\t * @access public\r\t\t\t\t * @return "
-"void\r\t\t\t\t */\r\t\t\t\tpublic function __construct() {\r\t\t\t\t\t$this-"
-">id                 = 'fraktjakt_shipping_method'; // Id for your shipping "
-"method. Should be uunique.\r\t\t\t\t\t$this->method_title       = __"
-"( 'Fraktjakt','fraktjakt-shipping-for-woocommerce' );  // Title shown in "
-"admin"
+#. #-#-#-#-#  plugin.pot (Fraktjakt Shipping Method for WooCommerce 1.2.6)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "http://www.fraktjakt.se"
 msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
 "Fraktjakt shipping method plugin for WooCommerce. Integrates several "
-"shipping services through Fraktjakt.\rVersion: 1.2.5\rAuthor: Fraktjakt AB "
-"(Sweden)\rAuthor URI: http://www.fraktjakt.se\r*/\r\r/**\r * Check if "
-"WooCommerce is active\r */\rif ( in_array( 'woocommerce/woocommerce.php', "
-"apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {\r\r"
-"\tfunction fraktjakt_shipping_method_init() {\r\t\tif ( ! class_exists"
-"( 'WC_Fraktjakt_Shipping_Method' ) ) {\r\t\t\tclass "
-"WC_Fraktjakt_Shipping_Method extends WC_Shipping_Method {\r\t\t\t\t\r\t\t\t"
-"\t//$consignor_key;\r\t\t\t\t\r\t\t\t\t/**\r\t\t\t\t * Constructor for your "
-"shipping class\r\t\t\t\t *\r\t\t\t\t * @access public\r\t\t\t\t * @return "
-"void\r\t\t\t\t */\r\t\t\t\tpublic function __construct() {\r\t\t\t\t\t$this-"
-">id                 = 'fraktjakt_shipping_method'; // Id for your shipping "
-"method. Should be uunique.\r\t\t\t\t\t$this->method_title       = __"
-"( 'Fraktjakt','fraktjakt-shipping-for-woocommerce' );  // Title shown in "
-"admin"
+"shipping services through Fraktjakt."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid ""
-"Fraktjakt AB (Sweden)\rAuthor URI: http://www.fraktjakt.se\r*/\r\r/**\r * "
-"Check if WooCommerce is active\r */\rif ( in_array( 'woocommerce/woocommerce."
-"php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) "
-"{\r\r\tfunction fraktjakt_shipping_method_init() {\r\t\tif ( ! class_exists"
-"( 'WC_Fraktjakt_Shipping_Method' ) ) {\r\t\t\tclass "
-"WC_Fraktjakt_Shipping_Method extends WC_Shipping_Method {\r\t\t\t\t\r\t\t\t"
-"\t//$consignor_key;\r\t\t\t\t\r\t\t\t\t/**\r\t\t\t\t * Constructor for your "
-"shipping class\r\t\t\t\t *\r\t\t\t\t * @access public\r\t\t\t\t * @return "
-"void\r\t\t\t\t */\r\t\t\t\tpublic function __construct() {\r\t\t\t\t\t$this-"
-">id                 = 'fraktjakt_shipping_method'; // Id for your shipping "
-"method. Should be uunique.\r\t\t\t\t\t$this->method_title       = __"
-"( 'Fraktjakt','fraktjakt-shipping-for-woocommerce' );  // Title shown in "
-"admin"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid ""
-"http://www.fraktjakt.se\r*/\r\r/**\r * Check if WooCommerce is active\r */"
-"\rif ( in_array( 'woocommerce/woocommerce.php', apply_filters"
-"( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {\r\r\tfunction "
-"fraktjakt_shipping_method_init() {\r\t\tif ( ! class_exists"
-"( 'WC_Fraktjakt_Shipping_Method' ) ) {\r\t\t\tclass "
-"WC_Fraktjakt_Shipping_Method extends WC_Shipping_Method {\r\t\t\t\t\r\t\t\t"
-"\t//$consignor_key;\r\t\t\t\t\r\t\t\t\t/**\r\t\t\t\t * Constructor for your "
-"shipping class\r\t\t\t\t *\r\t\t\t\t * @access public\r\t\t\t\t * @return "
-"void\r\t\t\t\t */\r\t\t\t\tpublic function __construct() {\r\t\t\t\t\t$this-"
-">id                 = 'fraktjakt_shipping_method'; // Id for your shipping "
-"method. Should be uunique.\r\t\t\t\t\t$this->method_title       = __"
-"( 'Fraktjakt','fraktjakt-shipping-for-woocommerce' );  // Title shown in "
-"admin"
+msgid "Fraktjakt AB (Sweden)"
 msgstr ""
