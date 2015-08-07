@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fraktjakt Shipping Method for WooCommerce 1.2.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/fraktjakt-shipping-for-woocommerce\n"
-"POT-Creation-Date: 2015-08-07 13:43+0200\n"
-"PO-Revision-Date: 2015-08-07 13:43+0200\n"
+"POT-Creation-Date: 2015-08-07 14:12+0200\n"
+"PO-Revision-Date: 2015-08-07 14:12+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv\n"
@@ -49,10 +49,10 @@ msgstr "Driftläge"
 
 #: fraktjakt-woocommerce-shipping.php:147
 msgid ""
-"Test this shipping integration using Fraktjakts API TEST server before entering our production "
+"Test this shipping integration using Fraktjakts TEST API server before entering our production "
 "environment."
 msgstr ""
-"Testa gärna din fraktintegration i Fraktjakts API TEST server innan du kör skarpt  i produktionsservern."
+"Testa gärna din fraktintegration i Fraktjakts TEST API server innan du kör skarpt  i produktionsservern."
 
 #: fraktjakt-woocommerce-shipping.php:151
 msgid "Production"
@@ -180,6 +180,13 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Fraktjakt AB (Sweden)"
 msgstr "Fraktjakt AB (Sverige)"
+
+#~ msgid ""
+#~ "Test this shipping integration using Fraktjakts API TEST server before entering our production "
+#~ "environment."
+#~ msgstr ""
+#~ "Testa gärna din fraktintegration i Fraktjakts API TEST server innan du kör skarpt  i "
+#~ "produktionsservern."
 
 #~ msgid "Fraktjakt Shipping Method"
 #~ msgstr "Fraktjakt"
