@@ -144,7 +144,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				'title' => __('Operation Mode', 'fraktjakt-shipping-for-woocommerce'),
 				'type' => 'select',
 				'class'         => 'wc-enhanced-select',
-				'description' => __('Test this shipping integration using Fraktjakts API TEST server before entering our production environment.', 'fraktjakt-shipping-for-woocommerce'),
+				'description' => __('Test this shipping integration using Fraktjakts TEST API server before entering our production environment.', 'fraktjakt-shipping-for-woocommerce'),
 				//'label' => __('Enable test mode', 'fraktjakt-shipping-for-woocommerce'),
 				'default' => 'production',
 		        'options'    => array(
