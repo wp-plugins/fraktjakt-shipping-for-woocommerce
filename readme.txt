@@ -5,7 +5,7 @@ Donate link: http://www.fraktjakt.se
 Tags: fraktmodul,WooCommerce,shipping,shipping method,Posten,DHL,Schenker,PostNord,FedEx,UPS,DSV,Bring,Paket,Frakt,Fraktintegrering
 Requires at least: 3.0.1
 Tested up to: 4.2.4
-Stable tag: 1.2.4
+Stable tag: 1.2.5
 Contributors: Fraktjakt
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -44,6 +44,8 @@ Fraktjakt for WooCommerce requires the WooCommerce plugin as well as an account 
 Register your free account on [Fraktjakt](http://fraktjakt.se/shipper/register_company "http://fraktjakt.se/shipper/register_company").
 PLEASE NOTE that Fraktjakt currently only supports Swedish webshops!
 
+= USER MANUAL =
+[Download our User Manual](http://www.fraktjakt.se/downloads/Fraktjakt_WooCommerce_Manual.pdf "Download the User Manual in PDF") for Fraktjakt WooCommerce shipping method in PDF 
 
 == Installation ==
 
@@ -69,8 +71,10 @@ PLEASE NOTE that Fraktjakt currently only supports Swedish webshops!
 7. FedEx international waybill.
 
 == Changelog ==
+= 1.2.5 =
+* Added link to Fraktjakt configuration in the settings form.
 = 1.2.4 =
-* Cosmetic bugfixes. Removes redundant colon before prices and white spaces before comma. Also corrects some text and titles in settings. 
+* Cosmetic bugfixes. Removes redundant colon before prices and white spaces before comma. Also corrects some text and titles in settings. 
 = 1.2.3 =
 * Changes in the presention of shipping prices
 * Fixed Swedish translation
